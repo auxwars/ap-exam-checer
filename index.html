@@ -575,11 +575,11 @@
       by ±2–3 points year to year.</p>
       <table>
         <tr><th>AP Score</th><th>Min composite (est.)</th><th>Approx. % correct needed</th></tr>
-        <tr><td>5</td><td>≥ 70 / 100</td><td>~70%</td></tr>
-        <tr><td>4</td><td>≥ 55 / 100</td><td>~55%</td></tr>
-        <tr><td>3</td><td>≥ 40 / 100</td><td>~40%</td></tr>
-        <tr><td>2</td><td>≥ 24 / 100</td><td>~24%</td></tr>
-        <tr><td>1</td><td>0 – 23</td><td>&lt; 24%</td></tr>
+        <tr><td>5</td><td>≥ 72 / 100</td><td>~72%</td></tr>
+        <tr><td>4</td><td>≥ 57 / 100</td><td>~57%</td></tr>
+        <tr><td>3</td><td>≥ 43 / 100</td><td>~43%</td></tr>
+        <tr><td>2</td><td>≥ 27 / 100</td><td>~27%</td></tr>
+        <tr><td>1</td><td>0 – 26</td><td>&lt; 27%</td></tr>
       </table>
     </div>
   </details>
@@ -627,13 +627,15 @@
   const FRQ_POINTS = [10, 12, 10, 8]; // Q1–Q4 raw points
   const FRQ_TOTAL  = FRQ_POINTS.reduce((a, b) => a + b, 0); // 40
 
-  // Estimated composite cutoffs (0–100) for 2025 format
-  // Derived from 2025 score distribution (67% pass rate, mean 3.12)
+  // Estimated composite cutoffs (0–100) for 2025 format.
+  // Derived from prep-site consensus and the 2025 score distribution
+  // (67% pass rate, mean 3.12). CB does not publish official cutoffs.
+  // Multiple sources converge on ~72% for 5, ~57% for 4, ~43% for 3, ~27% for 2.
   const CUTOFFS = [
-    { score: 5, min: 70, label: 'Extremely well qualified', color: 's5' },
-    { score: 4, min: 55, label: 'Well qualified',           color: 's4' },
-    { score: 3, min: 40, label: 'Qualified',                color: 's3' },
-    { score: 2, min: 24, label: 'Possibly qualified',       color: 's2' },
+    { score: 5, min: 72, label: 'Extremely well qualified', color: 's5' },
+    { score: 4, min: 57, label: 'Well qualified',           color: 's4' },
+    { score: 3, min: 43, label: 'Qualified',                color: 's3' },
+    { score: 2, min: 27, label: 'Possibly qualified',       color: 's2' },
     { score: 1, min: 0,  label: 'No recommendation',        color: 's1' },
   ];
 
